@@ -25,7 +25,7 @@
 	"Depth value for guards fighting underwater mobs" = 5
 	"Mobs that guards actively protect when they get targeted" = ["minecraft:villager", "guardvillagers:guard", "minecraft:iron_golem"]
 	#Range: -999.9000244140625 ~ 999.0
-	"Chance to drop equipment" = 100.0
+	"Chance to drop equipment" = 10.0
 	#This makes guards form a phalanx
 	"Have guards form a phalanx?" = true
 	#Range: -500.0 ~ 900.0

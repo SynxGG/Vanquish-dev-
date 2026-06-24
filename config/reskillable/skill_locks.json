@@ -240,15 +240,17 @@
     "mutantmonsters:mutant_skeleton_boots": [],
 
 //MAJRUSZS DIFFICULTY
+    "majruszsdifficulty:tattered_helmet": ["defense:2"],
+    "majruszsdifficulty:tattered_chestplate": ["defense:2"],
+    "majruszsdifficulty:tattered_leggings": ["defense:2"],
+    "majruszsdifficulty:tattered_boots": ["defense:2"],
+
     "majruszsdifficulty:wither_sword": [],
+    
     "majruszsdifficulty:enderium_sword": [],
     "majruszsdifficulty:enderium_shovel": [],
     "majruszsdifficulty:enderium_pickaxe": [],
     "majruszsdifficulty:enderium_axe": [],
-    "majruszsdifficulty:tattered_helmet": [],
-    "majruszsdifficulty:tattered_chestplate": [],
-    "majruszsdifficulty:tattered_leggings": [],
-    "majruszsdifficulty:tattered_boots": [],
     "majruszsdifficulty:enderium_helmet": [],
     "majruszsdifficulty:enderium_chestplate": [],
     "majruszsdifficulty:enderium_leggings": [],

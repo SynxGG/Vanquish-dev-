@@ -4,10 +4,10 @@
 	"checkForCampfireDelayInTicks": 40,
 	// The radius around the campfire in blocks where players receive the regeneration effect.
 	// min: 1, max: 64
-	"healingRadius": 16,
+	"healingRadius": 1,
 	// The duration of the regeneration effect which the campfire applies.
 	// min: 1, max: 600
-	"effectDurationSeconds": 60,
+	"effectDurationSeconds": 15,
 	// The level of regeneration which the campfire applies, by default 1.
 	// min: 1, max: 50
 	"regenerationLevel": 1,

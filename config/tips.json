@@ -1,5 +1,5 @@
 {
-  "defaultCycleTime": 8000,
+  "defaultCycleTime": 16000,
   "ignoredNamespaces": [
     "tipsmod"
   ],

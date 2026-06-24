@@ -1,7 +1,12 @@
-- Ressource pack bow 2D
 - Loot tables custom
 - Hardmode
 - Post Hardmode
 - Balance infernal mobs
 - Healing Campfire Nerf
 - Nerf le F3 (coordonnées, biome type, etc)
+- Blood Moon avec mobs uniques
+- Pêche à mob uniques
+QoL /// Polish
+- Ressource pack bow 2D
+- custom le main menu
+- ajouter loading background
