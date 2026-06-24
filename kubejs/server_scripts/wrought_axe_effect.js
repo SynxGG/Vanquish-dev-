@@ -1,7 +1,7 @@
 PlayerEvents.tick(event => {
   const player = event.player
 
-  // Une fois par seconde, pas besoin de spam chaque tick
+  // 1x/sec, no tick spam
   if (player.age % 20 !== 0) return
 
   const WROUGHT_AXE = 'mowziesmobs:wrought_axe'
@@ -15,6 +15,6 @@ PlayerEvents.tick(event => {
 
   if (!holdingAxe) return
 
-  // Slowness I pendant 2 secondes, refresh chaque seconde
+  // Slowness II for 2 sec, refresh every sec
   player.potionEffects.add('minecraft:slowness', 40, 1, false, false)
 })

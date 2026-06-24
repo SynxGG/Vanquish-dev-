@@ -255,7 +255,7 @@
     "majruszsdifficulty:enderium_boots": [],
 
 //MOWZIES MOB
-    "mowziesmobs:wrought_axe": ["attack:15", "magic:15"],
+    "mowziesmobs:wrought_axe": ["magic:15"],
     "mowziesmobs:wrought_helmet": ["defense:2"],
     "mowziesmobs:umvuthana_mask_fury": ["magic:6"],
     "mowziesmobs:umvuthana_mask_fear": ["magic:6"],
@@ -281,9 +281,9 @@
     "mowziesmobs:elokosa_paw_new": [],
 
 //TOO MANY BOWS
-    "too_many_bows:emerald_sage_bow": ["mining:10", "magic: 6"],
-    "too_many_bows:ironclad_bow": ["attack:8", "agility: 6", "defense: 6"],
-    "too_many_bows:hunter_bow": ["attack:8", "agility: 4"],
+    "too_many_bows:emerald_sage_bow": ["mining:10", "magic:6"],
+    "too_many_bows:ironclad_bow": ["attack:8", "agility:6", "defense:6"],
+    "too_many_bows:hunter_bow": ["attack:8", "agility:4"],
 
     "too_many_bows:ancient_sage_bow": [],
     "too_many_bows:arcane_bow": [],

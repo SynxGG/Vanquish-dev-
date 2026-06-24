@@ -9,8 +9,8 @@
   "hudCompassX": 95,
   "hudCompassXOffhand": 124,
   "hudCompassY": -20,
-  "lootChance": 0.025,
-  "mobEntityUseImmersiveArmorChance": 0.5,
+  "lootChance": 0.0,
+  "mobEntityUseImmersiveArmorChance": 0.1,
   "overwriteValues": {},
   "version": 1
 }

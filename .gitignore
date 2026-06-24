@@ -1,0 +1,26 @@
+# Logs
+logs/
+crash-reports/
+
+# Monde de test
+saves/
+
+# Screenshots
+screenshots/
+
+# CurseForge
+.curseclient
+
+# Fichiers locaux Minecraft
+options.txt
+usercache.json
+usernamecache.json
+
+# Divers logs
+*.log
+
+# ModernFix
+modernfix/
+
+# Dossiers locaux
+local/
