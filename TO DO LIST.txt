@@ -2,3 +2,6 @@
 - Loot tables custom
 - Hardmode
 - Post Hardmode
+- Balance infernal mobs
+- Healing Campfire Nerf
+- Nerf le F3 (coordonnées, biome type, etc)
