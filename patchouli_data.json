@@ -1,0 +1,39 @@
+{
+  "bookGuiScale": 0,
+  "clickedVisualize": false,
+  "bookData": {
+    "apotheosis:apoth_chronicle": {
+      "viewedEntries": [
+        "apotheosis:adventure/attributes/armor",
+        "apotheosis:adventure/affix_loot/affixes",
+        "apotheosis:adventure/affix_loot/rarities",
+        "apotheosis:garden/bamboo",
+        "apotheosis:garden/sugarcane",
+        "apotheosis:garden/cactus",
+        "apotheosis:garden/ender_lead",
+        "apotheosis:potion/effects/knowledge",
+        "apotheosis:potion/effects/bleeding",
+        "apotheosis:potion/effects/sundering",
+        "apotheosis:potion/effects/grievous",
+        "apotheosis:potion/effects/vitality",
+        "apotheosis:potion/recipes/absorption",
+        "apotheosis:potion/charms/charm",
+        "apotheosis:potion/charms/unbreakable",
+        "apotheosis:potion/charms/curios",
+        "apotheosis:adventure/bosses/boss_dungeons",
+        "apotheosis:enchanting/enchantments/types",
+        "apotheosis:enchanting/table/power",
+        "apotheosis:enchanting/table/stats",
+        "apotheosis:enchanting/progression/levels1_30",
+        "apotheosis:enchanting/progression/levels60_80",
+        "apotheosis:enchanting/progression/levels30_60",
+        "apotheosis:enchanting/table/seed",
+        "apotheosis:enchanting/table/info",
+        "apotheosis:enchanting/table/enchantability",
+        "apotheosis:enchanting/table/infusion"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
+}

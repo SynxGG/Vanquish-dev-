@@ -1,0 +1,65 @@
+[
+  {
+    "mob": [
+      "mutantmonsters:mutant_creeper",
+      "mutantmonsters:mutant_enderman",
+      "mutantmonsters:mutant_skeleton",
+      "mutantmonsters:mutant_zombie",
+      "mutantmonsters:mutant_snow_golem",
+      "mutantmonsters:spider_pig"
+    ],
+    "when": "onjoin",
+    "spawntype": [
+      "spawn_egg",
+      "command",
+      "mob_summoned",
+      "dispenser"
+    ],
+    "result": "allow"
+  },
+  {
+    "mob": [
+      "mutantmonsters:mutant_creeper",
+      "mutantmonsters:mutant_enderman",
+      "mutantmonsters:mutant_skeleton",
+      "mutantmonsters:mutant_zombie",
+      "mutantmonsters:mutant_snow_golem",
+      "mutantmonsters:spider_pig"
+    ],
+    "when": "onjoin",
+    "phase": "vanquish_expert",
+    "result": "allow"
+  },
+  {
+    "mob": [
+      "mutantmonsters:mutant_creeper",
+      "mutantmonsters:mutant_enderman",
+      "mutantmonsters:mutant_skeleton",
+      "mutantmonsters:mutant_zombie",
+      "mutantmonsters:mutant_snow_golem",
+      "mutantmonsters:spider_pig"
+    ],
+    "when": "onjoin",
+    "result": "deny"
+  },
+{
+  "mob": "ghost_villager:ghost_villager",
+  "when": "onjoin",
+  "spawntype": [
+    "command",
+    "spawn_egg"
+  ],
+  "result": "allow"
+},
+{
+  "mob": "ghost_villager:ghost_villager",
+  "when": "onjoin",
+  "phase": "vanquish_expert",
+  "result": "default"
+},
+{
+  "mob": "ghost_villager:ghost_villager",
+  "when": "onjoin",
+  "result": "deny"
+}
+]

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mutantmonsters:mutant_creeper",
+    "mutantmonsters:mutant_enderman",
+    "mutantmonsters:mutant_skeleton",
+    "mutantmonsters:mutant_zombie",
+    "mutantmonsters:mutant_snow_golem",
+    "mutantmonsters:spider_pig"
+  ]
+}

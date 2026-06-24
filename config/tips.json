@@ -1,0 +1,15 @@
+{
+  "defaultCycleTime": 8000,
+  "ignoredNamespaces": [
+    "tipsmod"
+  ],
+  "ignoredTips": [],
+  "hideUnlocalizedTips": true,
+  "tipRenderWidthPercent": 0.4,
+  "defaultTitle": {
+    "bold": true,
+    "underlined": false,
+    "color": "gold",
+    "translate": "Vanquish"
+  }
+}

@@ -1,0 +1,31 @@
+
+[Timing]
+	#How many seconds the fade-to-black takes when sleeping (default: 3)
+	#Range: 1 ~ 10
+	fadeInSeconds = 4
+	#How many seconds the fade-out takes when waking up (default: 5)
+	#Range: 1 ~ 10
+	fadeOutSeconds = 5
+
+[Text]
+	#Text shown on screen while sleeping
+	sleepingText = " "
+	#Prefix for the day counter. Final text will be e.g. 'Day No. 3'
+	dayText = "Day "
+
+[Sound]
+	#Volume of the sleep ambience sound (0.0 to 1.0)
+	#Range: 0.0 ~ 1.0
+	soundVolume = 1.0
+	#Pitch of the sleep ambience sound (0.5 to 2.0)
+	#Range: 0.5 ~ 2.0
+	soundPitch = 1.0
+
+[Features]
+	#Enable the black screen overlay when sleeping
+	enableOverlay = true
+	#Enable the camera tilt effect when sleeping
+	enableCameraTilt = true
+	#Enable the sleep ambience sound
+	enableSound = true
+

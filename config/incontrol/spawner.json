@@ -1,0 +1,34 @@
+[
+  {
+    "phase": "vanquish_expert",
+    "mob": [
+      "mutantmonsters:mutant_zombie",
+      "mutantmonsters:mutant_skeleton",
+      "mutantmonsters:mutant_creeper",
+      "mutantmonsters:mutant_enderman"
+    ],
+    "weights": [
+      40,
+      30,
+      20,
+      10
+    ],
+    "attempts": 30,
+    "persecond": 0.002,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 32,
+      "maxdist": 96,
+      "maxthis": 1,
+      "validspawn": true,
+      "sturdy": true,
+      "and": {
+        "maxlight": 7
+      }
+    }
+  }
+]
