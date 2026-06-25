@@ -6,6 +6,9 @@
 - Nerf le F3 (coordonnées, biome type, etc)
 - Blood Moon avec mobs uniques
 - Pêche à mob uniques
+- Summoner de Boss Craftable
+- Ajouter des Events Random type "YOU HEAR THE COLOSSUS STOMPING THE GROUND..." et tu vois un colossus géant arriver vers le player au loin
+- Mod The Sevens Seas -- Ajouter Loottable spécial océans
 QoL /// Polish
 - Ressource pack bow 2D
 - custom le main menu
