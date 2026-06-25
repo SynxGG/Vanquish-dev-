@@ -30,5 +30,59 @@
         "maxlight": 7
       }
     }
+  },
+  {
+    "number": {
+      "name": "vanquish_bloodmoon_spawn_table",
+      "expression": "eq(1)"
+    },
+    "mob": "minecraft:illusioner",
+    "addscoreboardtags": [
+      "vanquish_bloodmoon_debug",
+      "vanquish_bloodmoon_pre"
+    ],
+    "attempts": 100,
+    "persecond": 1.0,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 24,
+      "maxdist": 64,
+      "minheight": -64,
+      "maxheight": 320,
+      "maxthis": 1,
+      "norestrictions": true,
+      "sturdy": true
+    }
+  },
+  {
+    "number": {
+      "name": "vanquish_bloodmoon_spawn_table",
+      "expression": "eq(2)"
+    },
+    "mob": "cataclysm:the_harbinger",
+    "addscoreboardtags": [
+      "vanquish_bloodmoon_debug",
+      "vanquish_bloodmoon_hard"
+    ],
+    "attempts": 100,
+    "persecond": 1.0,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 32,
+      "maxdist": 80,
+      "minheight": -64,
+      "maxheight": 320,
+      "maxthis": 1,
+      "norestrictions": true,
+      "sturdy": true
+    }
   }
 ]
