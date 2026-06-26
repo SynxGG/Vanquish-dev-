@@ -36,40 +36,14 @@
       "name": "vanquish_bloodmoon_spawn_table",
       "expression": "eq(1)"
     },
-    "mob": "minecraft:illusioner",
+    "mob": "creepycreepers:halloween_creeper",
     "addscoreboardtags": [
-      "vanquish_bloodmoon_debug",
-      "vanquish_bloodmoon_pre"
+      "vanquish_bloodmoon_spawn",
+      "vanquish_bloodmoon_pre",
+      "vanquish_halloween_creeper"
     ],
-    "attempts": 100,
-    "persecond": 1.0,
-    "amount": {
-      "minimum": 1,
-      "maximum": 1
-    },
-    "conditions": {
-      "dimension": "minecraft:overworld",
-      "mindist": 24,
-      "maxdist": 64,
-      "minheight": -64,
-      "maxheight": 320,
-      "maxthis": 1,
-      "norestrictions": true,
-      "sturdy": true
-    }
-  },
-  {
-    "number": {
-      "name": "vanquish_bloodmoon_spawn_table",
-      "expression": "eq(2)"
-    },
-    "mob": "cataclysm:the_harbinger",
-    "addscoreboardtags": [
-      "vanquish_bloodmoon_debug",
-      "vanquish_bloodmoon_hard"
-    ],
-    "attempts": 100,
-    "persecond": 1.0,
+    "attempts": 20,
+    "persecond": 0.00125,
     "amount": {
       "minimum": 1,
       "maximum": 1
@@ -77,12 +51,118 @@
     "conditions": {
       "dimension": "minecraft:overworld",
       "mindist": 32,
-      "maxdist": 80,
-      "minheight": -64,
-      "maxheight": 320,
+      "maxdist": 96,
       "maxthis": 1,
       "norestrictions": true,
-      "sturdy": true
+      "sturdy": true,
+      "and": {
+        "maxlight": 7
+      }
+    }
+  },
+  {
+    "number": {
+      "name": "vanquish_bloodmoon_spawn_table",
+      "expression": "eq(1)"
+    },
+    "mob": [
+      "royalvariations:royal_zombie",
+      "royalvariations:royal_skeleton",
+      "royalvariations:royal_creeper"
+    ],
+    "weights": [
+      45,
+      35,
+      20
+    ],
+    "addscoreboardtags": [
+      "vanquish_bloodmoon_spawn",
+      "vanquish_bloodmoon_pre",
+      "vanquish_royal_variation"
+    ],
+    "attempts": 20,
+    "persecond": 0.0025,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 32,
+      "maxdist": 96,
+      "maxthis": 1,
+      "norestrictions": true,
+      "sturdy": true,
+      "and": {
+        "maxlight": 7
+      }
+    }
+  },
+  {
+    "number": {
+      "name": "vanquish_bloodmoon_spawn_table",
+      "expression": "eq(2)"
+    },
+    "mob": "creepycreepers:halloween_creeper",
+    "addscoreboardtags": [
+      "vanquish_bloodmoon_spawn",
+      "vanquish_bloodmoon_hard",
+      "vanquish_halloween_creeper"
+    ],
+    "attempts": 20,
+    "persecond": 0.00125,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 32,
+      "maxdist": 96,
+      "maxthis": 1,
+      "norestrictions": true,
+      "sturdy": true,
+      "and": {
+        "maxlight": 7
+      }
+    }
+  },
+  {
+    "number": {
+      "name": "vanquish_bloodmoon_spawn_table",
+      "expression": "eq(2)"
+    },
+    "mob": [
+      "royalvariations:royal_zombie",
+      "royalvariations:royal_skeleton",
+      "royalvariations:royal_creeper"
+    ],
+    "weights": [
+      45,
+      35,
+      20
+    ],
+    "addscoreboardtags": [
+      "vanquish_bloodmoon_spawn",
+      "vanquish_bloodmoon_hard",
+      "vanquish_royal_variation"
+    ],
+    "attempts": 20,
+    "persecond": 0.0025,
+    "amount": {
+      "minimum": 1,
+      "maximum": 1
+    },
+    "conditions": {
+      "dimension": "minecraft:overworld",
+      "mindist": 32,
+      "maxdist": 96,
+      "maxthis": 1,
+      "norestrictions": true,
+      "sturdy": true,
+      "and": {
+        "maxlight": 7
+      }
     }
   }
 ]
