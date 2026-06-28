@@ -1,4 +1,55 @@
 [
+{
+  "mob": [
+    "royalvariations:royal_zombie",
+    "royalvariations:royal_skeleton",
+    "royalvariations:royal_creeper",
+    "royalvariations:royal_enderman"
+  ],
+  "when": "onjoin",
+  "spawntype": [
+    "command",
+    "spawn_egg"
+  ],
+  "result": "allow"
+},
+{
+  "mob": [
+    "royalvariations:royal_zombie",
+    "royalvariations:royal_skeleton",
+    "royalvariations:royal_creeper",
+    "royalvariations:royal_enderman"
+  ],
+  "when": "onjoin",
+  "incontrol": true,
+  "number": {
+    "name": "vanquish_bloodmoon_spawn_table",
+    "expression": "gt(0)"
+  },
+  "result": "allow"
+},
+{
+  "mob": [
+    "royalvariations:royal_zombie",
+    "royalvariations:royal_skeleton",
+    "royalvariations:royal_creeper",
+    "royalvariations:royal_enderman"
+  ],
+  "when": "onjoin",
+  "result": "deny"
+},
+{
+  "mob": "minecraft:wither",
+  "when": "onjoin",
+  "phase": "vanquish_expert",
+  "result": "allow"
+},
+{
+  "mob": "minecraft:wither",
+  "when": "onjoin",
+  "customevent": "vanquish_wither_dormant",
+  "result": "deny_with_actions"
+},
   {
     "mob": [
       "mutantmonsters:mutant_creeper",

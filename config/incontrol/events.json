@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "on": "custom",
+    "parameters": {
+      "name": "vanquish_wither_dormant"
+    },
+    "command": [
+      "tellraw @a[distance=..32] {\"text\":\"The souls remain dormant. A greater infernal force must first be broken.\",\"color\":\"dark_red\",\"bold\":true}",
+      "summon minecraft:item ~ ~1 ~ {Item:{id:\"minecraft:wither_skeleton_skull\",Count:3b},PickupDelay:20s,Invulnerable:1b}",
+      "summon minecraft:item ~ ~1 ~ {Item:{id:\"minecraft:soul_sand\",Count:4b},PickupDelay:20s,Invulnerable:1b}"
+    ]
+  }
+]

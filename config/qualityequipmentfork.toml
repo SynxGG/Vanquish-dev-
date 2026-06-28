@@ -3,5 +3,5 @@
 #List of items that cannot get qualities.
 "Black list" = []
 #Overrides reforging requirements. Format: item_or_tag|material_item
-Override = ["minecraft:bow|minecraft:string", "toolbelt:belt|minecraft:leather"]
+Override = ["minecraft:bow|minecraft:string", "toolbelt:belt|minecraft:leather", "royalvariations:royal_knight_helmet|royalvariations:royal_armor_fragments", "royalvariations:royal_knight_cuirass|royalvariations:royal_armor_fragments", "royalvariations:royal_knight_leggings|royalvariations:royal_armor_fragments", "royalvariations:royal_knight_boots|royalvariations:royal_armor_fragments"]
 
