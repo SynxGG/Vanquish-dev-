@@ -26,11 +26,6 @@
     "minecraft:splash_potion": ["magic:8", "alchemist:8"],
     "minecraft:lingering_potion": ["magic:8", "alchemist:8"],
 
-//FARMING
-//    "minecraft:bamboo": ["farming:8"],
-//    "minecraft:cactus": ["farming:8"],
-//    "minecraft:sugar_cane": ["farming:8"],
-
 //MOD PROGRESSION
     "minecraft:spawner": ["magic:20", "building:15"],
     "minecraft:anvil": ["building:8"],
@@ -38,6 +33,7 @@
     "apotheosis:salvaging_table": ["building:10", "magic:12"],
     "apotheosis:gem_cutting_table": ["magic:15"],
     "apotheosis:simple_reforging_table": ["building:12", "magic:15"],
+    "vanquishmixin:workstation_block": ["building:15", "magic:15", "fishing:15"],
 
     "apotheosis:hellshelf": ["magic:12"],
     "apotheosis:infused_hellshelf": ["magic:15"],
