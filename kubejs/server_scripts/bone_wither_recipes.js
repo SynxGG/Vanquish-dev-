@@ -24,8 +24,10 @@ ServerEvents.recipes(event => {
 
   // --------------------------------------------------------------------------
   // Bone Block
-  // Replaces every crafting route to Bone Block, preventing the Bone Meal bypass.
-  // The vanilla Bone Block -> 9 Bone Meal recipe is intentionally left untouched.
+  // Replaces both directions:
+  // 9 Bones -> 1 Bone Block
+  // 1 Bone Block -> 9 Bones
+  // The vanilla Bone Block -> 9 Bone Meal recipe is removed.
   // --------------------------------------------------------------------------
 
   event.remove({ output: 'minecraft:bone_block' })
@@ -39,6 +41,16 @@ ServerEvents.recipes(event => {
       B: 'minecraft:bone'
     })
     .id('kubejs:vanquish/bone_block_from_bones')
+
+
+  event.remove({
+    input: 'minecraft:bone_block',
+    output: 'minecraft:bone_meal'
+  })
+
+  event
+    .shapeless('9x minecraft:bone', ['minecraft:bone_block'])
+    .id('kubejs:vanquish/bones_from_bone_block')
 
   // --------------------------------------------------------------------------
   // Bone Armor
@@ -94,7 +106,14 @@ ServerEvents.recipes(event => {
 
   // --------------------------------------------------------------------------
   // Wither materials
+  // The vanilla Wither Rose -> Black Dye route is disabled so every rose is a
+  // deliberate Wither Dust resource in Vanquish.
   // --------------------------------------------------------------------------
+
+  event.remove({
+    input: 'minecraft:wither_rose',
+    output: 'minecraft:black_dye'
+  })
 
   event
     .shapeless(WITHER_DUST, ['minecraft:wither_rose'])
@@ -144,9 +163,9 @@ ServerEvents.recipes(event => {
 
   event
     .shaped('immersive_armors:wither_chestplate', [
-      'W W',
+      'D W',
       'WAW',
-      'WDW'
+      'WWW'
     ], {
       D: WITHER_DUST,
       W: WITHER_BONE,

@@ -6,11 +6,11 @@ StartupEvents.registry('item', event => {
     .create('wither_bone')
     .displayName('Wither Bone')
     .maxStackSize(64)
-    .texture('minecraft:item/bone')
+    .texture('kubejs:item/wither_bone')
 
   event
     .create('wither_dust')
     .displayName('Wither Dust')
     .maxStackSize(64)
-    .texture('minecraft:item/gunpowder')
+    .texture('kubejs:item/wither_dust')
 })
