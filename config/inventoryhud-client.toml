@@ -71,7 +71,7 @@
 	#Range: > 1
 	barDuration = 300
 	#Show hidden effects
-	showHiddenEffects = true
+	showHiddenEffects = false
 	#Disable icons for effects in this list
 	effectsBlackList = []
 	#Show Potion HUD when debug menu is open

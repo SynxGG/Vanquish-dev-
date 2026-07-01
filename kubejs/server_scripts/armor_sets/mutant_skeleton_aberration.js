@@ -1,13 +1,14 @@
 // Vanquish - Mutant Skeleton Masterful set controller
 //
 // Complete normal set:
-// - No extra Vanquish effect.
+// - No additional Vanquish effect.
 //
 // Four Masterful pieces (tool_quality:41):
-// - kubejs:aberration only.
+// - Visible kubejs:aberration facade.
+// - Real hidden component effects:
+//   Bleeding Immunity, Hunger I, Unluck I, Resilience II, Resistance II.
 //
-// The custom effect itself handles Hunger, Unluck and knockback resistance.
-// Forge events handle Bleeding immunity and Resistance II.
+// Inventory HUD+ must keep showHiddenEffects=false so only Aberration is shown.
 
 const VQ_AB_ARMOR_IDS = [
   'mutantmonsters:mutant_skeleton_skull',
@@ -36,31 +37,38 @@ function vqAbHasFullMasterfulSet(player) {
   return validPieces === 4
 }
 
+function vqAbApplyEffect(player, effectId, amplifier, visible) {
+  // 50 ticks = 2.5 seconds, refreshed twice per second.
+  // visible=false marks the component effect as hidden.
+  player.potionEffects.add(effectId, 50, amplifier, false, visible)
+}
+
 ServerEvents.tick(event => {
   if (event.server.tickCount % 10 !== 0) return
 
   event.server.players.forEach(player => {
     if (!vqAbHasFullMasterfulSet(player)) {
+      // Remove the visible facade immediately.
+      // Hidden component effects expire naturally within 2.5 seconds.
       if (player.hasEffect('kubejs:aberration')) {
         player.removeEffect('kubejs:aberration')
       }
       return
     }
 
-    // 50 ticks = 2.5 seconds, refreshed twice per second.
-    // Aberration is the only MobEffect applied by this system.
-    player.potionEffects.add(
-      'kubejs:aberration',
-      50,
-      0,
-      false,
-      true
-    )
+    // Visible facade.
+    vqAbApplyEffect(player, 'kubejs:aberration', 0, true)
 
-    // Remove an already-active Bleeding effect immediately.
-    // Future applications are denied by the Forge listener.
-    if (player.hasEffect('majruszsdifficulty:bleeding')) {
-      player.removeEffect('majruszsdifficulty:bleeding')
-    }
+    // Real component effects, hidden from HUD.
+    vqAbApplyEffect(
+      player,
+      'majruszsdifficulty:bleeding_immunity',
+      0,
+      false
+    )
+    vqAbApplyEffect(player, 'minecraft:hunger', 0, false)
+    vqAbApplyEffect(player, 'minecraft:unluck', 0, false)
+    vqAbApplyEffect(player, 'quark:resilience', 1, false)
+    vqAbApplyEffect(player, 'minecraft:resistance', 1, false)
   })
 })
