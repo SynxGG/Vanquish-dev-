@@ -1,7 +1,7 @@
 // Vanquish - Mutant Skeleton Masterful set controller
 // Rule:
 // - Complete normal set: no additional Vanquish effect.
-// - Four pieces with tool_quality:41: visible Aberration + hidden internal effects.
+// - Four pieces with tool_quality:41: Aberration + hidden component effects.
 
 const VQ_AB_MobEffectInstance = Java.loadClass('net.minecraft.world.effect.MobEffectInstance')
 const VQ_AB_ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
@@ -24,41 +24,34 @@ function vqAbItemId(stack) {
 function vqAbIsMasterful(stack) {
   if (stack == null || stack.isEmpty()) return false
   const tag = stack.getTag()
-  return tag != null && tag.contains('tool_quality') && tag.getInt('tool_quality') === 41
-}
-
-function vqAbArmor(player) {
-  return {
-    head: player.getItemBySlot(VQ_AB_EquipmentSlot.HEAD),
-    chest: player.getItemBySlot(VQ_AB_EquipmentSlot.CHEST),
-    legs: player.getItemBySlot(VQ_AB_EquipmentSlot.LEGS),
-    feet: player.getItemBySlot(VQ_AB_EquipmentSlot.FEET)
-  }
+  return tag != null && tag.contains('tool_quality') && tag.getInt('tool_quality') == 41
 }
 
 function vqAbHasFullMasterfulSet(player) {
-  const armor = vqAbArmor(player)
+  const head = player.getItemBySlot(VQ_AB_EquipmentSlot.HEAD)
+  const chest = player.getItemBySlot(VQ_AB_EquipmentSlot.CHEST)
+  const legs = player.getItemBySlot(VQ_AB_EquipmentSlot.LEGS)
+  const feet = player.getItemBySlot(VQ_AB_EquipmentSlot.FEET)
 
-  const correctSet =
-    vqAbItemId(armor.head) === VQ_AB_MUTANT_SKELETON.head &&
-    vqAbItemId(armor.chest) === VQ_AB_MUTANT_SKELETON.chest &&
-    vqAbItemId(armor.legs) === VQ_AB_MUTANT_SKELETON.legs &&
-    vqAbItemId(armor.feet) === VQ_AB_MUTANT_SKELETON.feet
-
-  if (!correctSet) return false
-
-  return vqAbIsMasterful(armor.head) &&
-    vqAbIsMasterful(armor.chest) &&
-    vqAbIsMasterful(armor.legs) &&
-    vqAbIsMasterful(armor.feet)
+  return vqAbItemId(head) == VQ_AB_MUTANT_SKELETON.head &&
+    vqAbItemId(chest) == VQ_AB_MUTANT_SKELETON.chest &&
+    vqAbItemId(legs) == VQ_AB_MUTANT_SKELETON.legs &&
+    vqAbItemId(feet) == VQ_AB_MUTANT_SKELETON.feet &&
+    vqAbIsMasterful(head) &&
+    vqAbIsMasterful(chest) &&
+    vqAbIsMasterful(legs) &&
+    vqAbIsMasterful(feet)
 }
 
 function vqAbEffect(id) {
   return VQ_AB_ForgeRegistries.MOB_EFFECTS.getValue(new VQ_AB_ResourceLocation(id))
 }
 
-function vqAbApply(player, effect, duration, amplifier, showIcon) {
+function vqAbRefreshEffect(player, effect, duration, amplifier, showIcon) {
   if (effect == null) return
+
+  const current = player.getEffect(effect)
+  if (current != null && current.getDuration() > 10 && current.getAmplifier() == amplifier) return
 
   player.addEffect(new VQ_AB_MobEffectInstance(
     effect,
@@ -72,27 +65,24 @@ function vqAbApply(player, effect, duration, amplifier, showIcon) {
 
 PlayerEvents.tick(event => {
   const player = event.player
-
-  // Two checks per second.
-  if (player.age % 10 !== 0) return
-
   const aberration = vqAbEffect('kubejs:aberration')
+
   if (aberration == null) return
 
   if (!vqAbHasFullMasterfulSet(player)) {
-    // Remove the facade immediately. Hidden internal effects naturally expire
-    // within 30 ticks, avoiding deletion of longer effects from other sources.
+    // Remove the visible facade immediately. Hidden component effects expire
+    // naturally, so effects from another source are not forcibly deleted.
     if (player.hasEffect(aberration)) player.removeEffect(aberration)
     return
   }
 
-  // Visible facade. No particles, but its own icon remains visible.
-  vqAbApply(player, aberration, 30, 0, true)
+  // Visible facade.
+  vqAbRefreshEffect(player, aberration, 30, 0, true)
 
-  // Existing effects applied invisibly under the Aberration facade.
-  vqAbApply(player, vqAbEffect('majruszsdifficulty:bleeding_immunity'), 30, 0, false)
-  vqAbApply(player, vqAbEffect('minecraft:hunger'), 30, 0, false)
-  vqAbApply(player, vqAbEffect('minecraft:unluck'), 30, 0, false)
-  vqAbApply(player, vqAbEffect('quark:resilience'), 30, 1, false)
-  vqAbApply(player, vqAbEffect('minecraft:resistance'), 30, 1, false)
+  // Hidden component effects.
+  vqAbRefreshEffect(player, vqAbEffect('majruszsdifficulty:bleeding_immunity'), 30, 0, false)
+  vqAbRefreshEffect(player, vqAbEffect('minecraft:hunger'), 30, 0, false)
+  vqAbRefreshEffect(player, vqAbEffect('minecraft:unluck'), 30, 0, false)
+  vqAbRefreshEffect(player, vqAbEffect('quark:resilience'), 30, 1, false)
+  vqAbRefreshEffect(player, vqAbEffect('minecraft:resistance'), 30, 1, false)
 })
