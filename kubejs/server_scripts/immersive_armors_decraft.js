@@ -1,3 +1,6 @@
+// Vanquish - Immersive Armors decrafting
+// This file REPLACES the existing immersive_armors_decraft.js.
+
 ServerEvents.recipes(event => {
   const addDecraft = (id, output, input) => {
     event
@@ -30,28 +33,28 @@ ServerEvents.recipes(event => {
     'immersive_armors:wooden_boots'
   )
 
-  // Bone Armor
+  // Bone Armor - Vanquish total uncraft values
   addDecraft(
     'bone_helmet',
-    'minecraft:bone',
+    '6x minecraft:bone',
     'immersive_armors:bone_helmet'
   )
 
   addDecraft(
     'bone_chestplate',
-    '2x minecraft:bone',
+    '9x minecraft:bone',
     'immersive_armors:bone_chestplate'
   )
 
   addDecraft(
     'bone_leggings',
-    '2x minecraft:bone',
+    '8x minecraft:bone',
     'immersive_armors:bone_leggings'
   )
 
   addDecraft(
     'bone_boots',
-    'minecraft:bone',
+    '5x minecraft:bone',
     'immersive_armors:bone_boots'
   )
 })
